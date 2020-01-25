@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Media;
 using System.Windows;
 using System.Windows.Controls;
@@ -112,7 +113,7 @@ namespace Game
         private void MyClickFunction(object sender, RoutedEventArgs e)
         {
             var tag = ((Button)sender).Tag;
-            string location = "C: \\Users\\kanth\\OneDrive\\Pulpit\\Game\\Game\\Sounds" + tag.ToString() + ".wav";
+            string location = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\Sounds\\" + tag.ToString() + ".wav";
             Button_Sound.SoundLocation = location;
             Button_Sound.Play();
 

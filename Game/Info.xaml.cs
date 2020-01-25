@@ -71,7 +71,6 @@ namespace Game
         {
             var tag = ((Button)sender).Tag;  
             string location = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\Sounds\\" + tag.ToString() + ".wav";
-            Console.WriteLine(location);
             Button_Sound.SoundLocation = location;
             Button_Sound.Play();
         }

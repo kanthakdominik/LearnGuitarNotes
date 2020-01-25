@@ -110,3 +110,33 @@ C:\Users\kanth\OneDrive\Pulpit\Game\Game\obj\Debug\Game.Properties.Resources.res
 C:\Users\kanth\OneDrive\Pulpit\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\kanth\OneDrive\Pulpit\Game\Game\obj\Debug\Game.exe
 C:\Users\kanth\OneDrive\Pulpit\Game\Game\obj\Debug\Game.pdb
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\bin\Debug\Game.exe.config
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\bin\Debug\Documentation\Game.xml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\bin\Debug\Game.exe
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\bin\Debug\Game.pdb
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\bin\Debug\Game.xml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\HelpInfo.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Info.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Level_One.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Level_Two.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\MainWindow.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\MyMessageBox1.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\MyMessageBox2.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\App.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game_Content.g.cs
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game_MarkupCompile.cache
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game_MarkupCompile.lref
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\App.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\HelpInfo.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Info.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Level_One.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Level_Two.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\MainWindow.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\MyMessageBox1.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\MyMessageBox2.baml
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game.g.resources
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game.exe
+C:\Users\kanth\OneDrive\Dokumenty\Moje projekty\LearnGuitarNotes\Game\obj\Debug\Game.pdb

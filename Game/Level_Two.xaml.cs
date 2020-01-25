@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Media;
 using System.Windows;
 using System.Windows.Controls;
@@ -52,7 +53,7 @@ namespace Game
             Button_Play.DataContext = my_sound;
             myForm.DataContext = my_sound;
 
-            string location = "E: \\Dokumenty\\Game\\Game\\Sounds\\" + random_sound + ".wav";
+            string location = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\Sounds\\" + random_sound + ".wav";
             Button_Sound.SoundLocation = location;
             Button_Sound.Play();
         }
@@ -126,7 +127,7 @@ namespace Game
         private void MyClickFunction(object sender, RoutedEventArgs e)
         {
             string sound_to_check = (sender as Button).Tag.ToString();
-            string location = "E: \\Dokumenty\\Game\\Game\\Sounds\\" + sound_to_check + ".wav";
+            string location = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\Sounds\\" + sound_to_check + ".wav";
             Button_Sound.SoundLocation = location;
             Button_Sound.Play();
             if (current_sound == sound_to_check)
@@ -140,7 +141,7 @@ namespace Game
                 Button_Play.DataContext = my_sound;
                 myForm.DataContext = my_sound;
 
-                string location2 = "E: \\Dokumenty\\Game\\Game\\Sounds\\" + random_sound + ".wav";
+                string location2 = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\Sounds\\" + random_sound + ".wav";
                 Button_Sound.SoundLocation = location2;
                 Button_Sound.Play();
 
@@ -164,7 +165,7 @@ namespace Game
                 Button_Play.DataContext = my_sound;
                 myForm.DataContext = my_sound;
 
-                string location2 = "E: \\Dokumenty\\Game\\Game\\Sounds\\" + random_sound + ".wav";
+                string location2 = Directory.GetParent(Directory.GetParent(Environment.CurrentDirectory).ToString()).ToString() + "\\Sounds\\" + random_sound + ".wav";
                 Button_Sound.SoundLocation = location2;
                 Button_Sound.Play();
 
