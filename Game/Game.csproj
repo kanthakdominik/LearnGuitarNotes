@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B246251-1080-4CC3-BBF4-A731BBF766E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Game</RootNamespace>
+    <AssemblyName>Game</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>bin\Debug\Documentation\Game.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Game_Info.cs" />
+    <Compile Include="HelpInfo.xaml.cs">
+      <DependentUpon>HelpInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Level_Two.xaml.cs">
+      <DependentUpon>Level_Two.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox1.xaml.cs">
+      <DependentUpon>MyMessageBox1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMessageBox2.xaml.cs">
+      <DependentUpon>MyMessageBox2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="P_counter.cs" />
+    <Compile Include="Sound.cs" />
+    <Page Include="HelpInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Level_One.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Level_Two.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Level_One.xaml.cs">
+      <DependentUpon>Level_One.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MyMessageBox1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyMessageBox2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\window_background.jpg" />
+    <Resource Include="Images\sound_button_background.jpg" />
+    <Resource Include="Images\back_to_menu.png" />
+    <Resource Include="Images\play_button.png" />
+    <Resource Include="Images\MyMessageBox.jpg" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\sound_button_background2.jpg" />
+    <Resource Include="Images\sound_button_background3.jpg" />
+    <Content Include="Sounds\A2.wav" />
+    <Content Include="Sounds\A3.wav" />
+    <Content Include="Sounds\A4.wav" />
+    <Content Include="Sounds\B2.wav" />
+    <Content Include="Sounds\B3.wav" />
+    <Content Include="Sounds\B4.wav" />
+    <Content Include="Sounds\C3.wav" />
+    <Content Include="Sounds\C4.wav" />
+    <Content Include="Sounds\C5.wav" />
+    <Content Include="Sounds\Cis3.wav" />
+    <Content Include="Sounds\Cis4.wav" />
+    <Content Include="Sounds\Cis5.wav" />
+    <Content Include="Sounds\D3.wav" />
+    <Content Include="Sounds\D4.wav" />
+    <Content Include="Sounds\D5.wav" />
+    <Content Include="Sounds\Dis3.wav" />
+    <Content Include="Sounds\Dis4.wav" />
+    <Content Include="Sounds\Dis5.wav" />
+    <Content Include="Sounds\E2.wav" />
+    <Content Include="Sounds\E3.wav" />
+    <Content Include="Sounds\E4.wav" />
+    <Content Include="Sounds\E5.wav" />
+    <Content Include="Sounds\F2.wav" />
+    <Content Include="Sounds\F3.wav" />
+    <Content Include="Sounds\F4.wav" />
+    <Content Include="Sounds\Fis2.wav" />
+    <Content Include="Sounds\Fis3.wav" />
+    <Content Include="Sounds\Fis4.wav" />
+    <Content Include="Sounds\G2.wav" />
+    <Content Include="Sounds\G3.wav" />
+    <Content Include="Sounds\G4.wav" />
+    <Content Include="Sounds\Gis2.wav" />
+    <Content Include="Sounds\Gis3.wav" />
+    <Content Include="Sounds\Gis4.wav" />
+    <Content Include="Sounds\H2.wav" />
+    <Content Include="Sounds\H3.wav" />
+    <Content Include="Sounds\H4.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

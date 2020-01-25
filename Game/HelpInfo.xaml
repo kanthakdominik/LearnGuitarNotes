@@ -1,0 +1,418 @@
+﻿<Window x:Class="Game.HelpInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        xmlns:converters="clr-namespace:System.Windows.Controls;assembly=PresentationFramework" 
+        mc:Ignorable="d"
+        Title="My Game" Height="768" Width="1366" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="Images/icon.ico" MinHeight="768" MinWidth="1364" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Window.Background>
+        <ImageBrush ImageSource="Images\window_background.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.Resources>
+            <!-- PUSTY TRIGGER DO PRZYCISKU-->
+            <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Background="{TemplateBinding Background}">
+                                <ContentPresenter />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid Height="100" VerticalAlignment="Top" Margin="10,10,10,0" >
+            <!--EXIT BUTTON-->
+            <!--MINIMIZE BUTTON-->
+        </Grid>
+        <!--****************************************************************************************************************************************************************-->
+        <Grid Margin="10,110,10,182" ShowGridLines="False">
+            <!-- STYL BUTTONÓW-->
+            <Grid.Resources>
+                <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+                <!-- STYL 1 -->
+                <Style TargetType="Button" x:Key="sound_button">
+                    <Setter Property="Button.Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="Images/sound_button_background.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="2,0,2,0" BorderBrush="#FF55410D">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <!-- STYL 2 dolne markery -->
+                <Style TargetType="Button" x:Key="sound_button2">
+                    <Setter Property="Button.Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="Images/sound_button_background2.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="2,0,2,0" BorderBrush="#FF55410D">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <!-- STYL 3 górne markery-->
+                <Style TargetType="Button" x:Key="sound_button3">
+                    <Setter Property="Button.Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="Images/sound_button_background3.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}" BorderThickness="2,0,2,0" BorderBrush="#FF55410D">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Transparent"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+                <!-- STYL TEXBLOCK-->
+                <Style TargetType="TextBlock" x:Key="sound_texblock">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Opacity" Value="1" />
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontWeight" Value="ExtraBold"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                    <Setter Property="Height" Value="35" />
+                    <Setter Property="Width" Value="50" />
+                </Style>
+                <Style TargetType="TextBlock" x:Key="sound_texblock_2">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Opacity" Value="1" />
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Foreground" Value="#FF816B1D"/>
+                    <Setter Property="FontWeight" Value="ExtraBold"/>
+                    <Setter Property="TextAlignment" Value="Center"/>
+                    <Setter Property="Height" Value="35" />
+                    <Setter Property="Width" Value="30" />
+                </Style>
+            </Grid.Resources>
+            <!-- Definiowanie przycisków dzwięków -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">0</TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">1</TextBlock>
+            <TextBlock Grid.Column="2" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">2</TextBlock>
+            <TextBlock Grid.Column="3" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">3</TextBlock>
+            <TextBlock Grid.Column="4" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">4</TextBlock>
+            <TextBlock Grid.Column="5" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">5</TextBlock>
+            <TextBlock Grid.Column="6" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">6</TextBlock>
+            <TextBlock Grid.Column="7" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">7</TextBlock>
+            <TextBlock Grid.Column="8" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">8</TextBlock>
+            <TextBlock Grid.Column="9" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">9</TextBlock>
+            <TextBlock Grid.Column="10" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">10</TextBlock>
+            <TextBlock Grid.Column="11" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">11</TextBlock>
+            <TextBlock Grid.Column="12" Grid.Row="0" TextAlignment="Center" Background="Transparent" FontSize="16" FontWeight="Bold">12</TextBlock>
+            <!--STRUNA e-->
+            <Button x:Name="Button_E4_e" Grid.Column="0" Grid.Row="1" Style="{StaticResource TransparentStyle}" Background="#FF2E2722" Click="MyClickFunction" Tag="E4">
+                <TextBlock Style="{StaticResource sound_texblock_2}" Width="30" >E4</TextBlock>
+            </Button>
+            <Button x:Name="Button_F4_e" Grid.Column="1" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="F4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_F4_e, Converter={StaticResource BooleanToVisibilityConverter}}">F4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Fis4_e" Grid.Column="2" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Fis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Fis4_e, Converter={StaticResource BooleanToVisibilityConverter}}">Fis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_G4_e" Grid.Column="3" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="G4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_G4_e, Converter={StaticResource BooleanToVisibilityConverter}}">G4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Gis4_e" Grid.Column="4" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Gis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Gis4_e, Converter={StaticResource BooleanToVisibilityConverter}}">Gis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_A4_e" Grid.Column="5" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="A4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_A4_e, Converter={StaticResource BooleanToVisibilityConverter}}">A4</TextBlock>
+            </Button>
+            <Button x:Name="Button_B4_e" Grid.Column="6" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="B4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_B4_e, Converter={StaticResource BooleanToVisibilityConverter}}">B4</TextBlock>
+            </Button>
+            <Button x:Name="Button_H4_e" Grid.Column="7" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="H4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_H4_e, Converter={StaticResource BooleanToVisibilityConverter}}">H4</TextBlock>
+            </Button>
+            <Button x:Name="Button_C5_e" Grid.Column="8" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="C5">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_C5_e, Converter={StaticResource BooleanToVisibilityConverter}}">C5</TextBlock>
+            </Button>
+            <Button x:Name="Button_Cis5_e" Grid.Column="9" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Cis5">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Cis5_e, Converter={StaticResource BooleanToVisibilityConverter}}">Cis5</TextBlock>
+            </Button>
+            <Button x:Name="Button_D5_e" Grid.Column="10" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="D5">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_D5_e, Converter={StaticResource BooleanToVisibilityConverter}}">D5</TextBlock>
+            </Button>
+            <Button x:Name="Button_Dis5_e" Grid.Column="11" Grid.Row="1" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Dis5">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Dis5_e, Converter={StaticResource BooleanToVisibilityConverter}}">Dis5</TextBlock>
+            </Button>
+            <Button x:Name="Button_E5_e" Grid.Column="12" Grid.Row="1" Style="{StaticResource sound_button3}" Click="MyClickFunction" Tag="E5">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_E5_e, Converter={StaticResource BooleanToVisibilityConverter}}">E5</TextBlock>
+            </Button>
+            <!--STRUNA b-->
+            <Button x:Name="Button_H3_h" Grid.Column="0" Grid.Row="2" Style="{StaticResource TransparentStyle}" Background="#FF2E2722" Click="MyClickFunction" Tag="H3">
+                <TextBlock Style="{StaticResource sound_texblock_2}" Width="30" >H3</TextBlock>
+            </Button>
+            <Button x:Name="Button_C4_h" Grid.Column="1" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="C4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_C4_h, Converter={StaticResource BooleanToVisibilityConverter}}">C4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Cis4_h" Grid.Column="2" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Cis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Cis4_h, Converter={StaticResource BooleanToVisibilityConverter}}">Cis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_D4_h" Grid.Column="3" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="D4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_D4_h, Converter={StaticResource BooleanToVisibilityConverter}}">D4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Dis4_h" Grid.Column="4" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Dis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Dis4_h, Converter={StaticResource BooleanToVisibilityConverter}}">Dis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_E4_h" Grid.Column="5" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="E4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_E4_h, Converter={StaticResource BooleanToVisibilityConverter}}">E4</TextBlock>
+            </Button>
+            <Button x:Name="Button_F4_h" Grid.Column="6" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="F4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_F4_h, Converter={StaticResource BooleanToVisibilityConverter}}">F4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Fis4_h" Grid.Column="7" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Fis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Fis4_h, Converter={StaticResource BooleanToVisibilityConverter}}">Fis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_G4_h" Grid.Column="8" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="G4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_G4_h, Converter={StaticResource BooleanToVisibilityConverter}}">G4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Gis4_h" Grid.Column="9" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Gis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Gis4_h, Converter={StaticResource BooleanToVisibilityConverter}}">Gis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_A4_h" Grid.Column="10" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="A4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_A4_h, Converter={StaticResource BooleanToVisibilityConverter}}">A4</TextBlock>
+            </Button>
+            <Button x:Name="Button_B4_h" Grid.Column="11" Grid.Row="2" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="B4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_B4_h, Converter={StaticResource BooleanToVisibilityConverter}}">B4</TextBlock>
+            </Button>
+            <Button x:Name="Button_H4_h" Grid.Column="12" Grid.Row="2" Style="{StaticResource sound_button2}" Click="MyClickFunction" Tag="H4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_H4_h, Converter={StaticResource BooleanToVisibilityConverter}}">H4</TextBlock>
+            </Button>
+            <!--STRUNA g-->
+            <Button x:Name="Button_G3_g" Grid.Column="0" Grid.Row="3" Style="{StaticResource TransparentStyle}" Background="#FF2E2722" Click="MyClickFunction" Tag="G3">
+                <TextBlock Style="{StaticResource sound_texblock_2}" Width="30" >G3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Gis3_g" Grid.Column="1" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Gis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Gis3_g, Converter={StaticResource BooleanToVisibilityConverter}}">Gis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_A3_g" Grid.Column="2" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="A3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_A3_g, Converter={StaticResource BooleanToVisibilityConverter}}">A3</TextBlock>
+            </Button>
+            <Button x:Name="Button_B3_g" Grid.Column="3" Grid.Row="3" Style="{StaticResource sound_button3}" Click="MyClickFunction" Tag="B3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_B3_g, Converter={StaticResource BooleanToVisibilityConverter}}">B3</TextBlock>
+            </Button>
+            <Button x:Name="Button_H3_g" Grid.Column="4" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="H3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_H3_g, Converter={StaticResource BooleanToVisibilityConverter}}">H3</TextBlock>
+            </Button>
+            <Button x:Name="Button_C4_g" Grid.Column="5" Grid.Row="3" Style="{StaticResource sound_button3}" Click="MyClickFunction" Tag="C4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_C4_g, Converter={StaticResource BooleanToVisibilityConverter}}">C4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Cis4_g" Grid.Column="6" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Cis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Cis4_g, Converter={StaticResource BooleanToVisibilityConverter}}">Cis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_D4_g" Grid.Column="7" Grid.Row="3" Style="{StaticResource sound_button3}" Click="MyClickFunction" Tag="D4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_D4_g, Converter={StaticResource BooleanToVisibilityConverter}}">D4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Dis4_g" Grid.Column="8" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Dis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Dis4_g, Converter={StaticResource BooleanToVisibilityConverter}}">Dis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_E4_g" Grid.Column="9" Grid.Row="3" Style="{StaticResource sound_button3}" Click="MyClickFunction" Tag="E4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_E4_g, Converter={StaticResource BooleanToVisibilityConverter}}">E4</TextBlock>
+            </Button>
+            <Button x:Name="Button_F4_g" Grid.Column="10" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="F4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_F4_g, Converter={StaticResource BooleanToVisibilityConverter}}">F4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Fis4_g" Grid.Column="11" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Fis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Fis4_g, Converter={StaticResource BooleanToVisibilityConverter}}">Fis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_G4_g" Grid.Column="12" Grid.Row="3" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="G4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_G4_g, Converter={StaticResource BooleanToVisibilityConverter}}">G4</TextBlock>
+            </Button>
+            <!--STRUNA d-->
+            <Button x:Name="Button_D3_d" Grid.Column="0" Grid.Row="4" Style="{StaticResource TransparentStyle}" Background="#FF2E2722" Click="MyClickFunction" Tag="D3">
+                <TextBlock Style="{StaticResource sound_texblock_2}" Width="30" >D3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Dis3_d" Grid.Column="1" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Dis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Dis3_d, Converter={StaticResource BooleanToVisibilityConverter}}">Dis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_E3_d" Grid.Column="2" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="E3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_E3_d, Converter={StaticResource BooleanToVisibilityConverter}}">E3</TextBlock>
+            </Button>
+            <Button x:Name="Button_F3_d" Grid.Column="3" Grid.Row="4" Style="{StaticResource sound_button2}" Click="MyClickFunction" Tag="F3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_F3_d, Converter={StaticResource BooleanToVisibilityConverter}}">F3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Fis3_d" Grid.Column="4" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Fis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Fis3_d, Converter={StaticResource BooleanToVisibilityConverter}}">Fis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_G3_d" Grid.Column="5" Grid.Row="4" Style="{StaticResource sound_button2}" Click="MyClickFunction" Tag="G3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_G3_d, Converter={StaticResource BooleanToVisibilityConverter}}">G3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Gis3_d" Grid.Column="6" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Gis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Gis3_d, Converter={StaticResource BooleanToVisibilityConverter}}">Gis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_A3_d" Grid.Column="7" Grid.Row="4" Style="{StaticResource sound_button2}" Click="MyClickFunction" Tag="A3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_A3_d, Converter={StaticResource BooleanToVisibilityConverter}}">A3</TextBlock>
+            </Button>
+            <Button x:Name="Button_B3_d" Grid.Column="8" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="B3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_B3_d, Converter={StaticResource BooleanToVisibilityConverter}}">B3</TextBlock>
+            </Button>
+            <Button x:Name="Button_H3_d" Grid.Column="9" Grid.Row="4" Style="{StaticResource sound_button2}" Click="MyClickFunction" Tag="H3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_H3_d, Converter={StaticResource BooleanToVisibilityConverter}}">H3</TextBlock>
+            </Button>
+            <Button x:Name="Button_C4_d" Grid.Column="10" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="C4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_C4_d, Converter={StaticResource BooleanToVisibilityConverter}}">C4</TextBlock>
+            </Button>
+            <Button x:Name="Button_Cis4_d" Grid.Column="11" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Cis4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Cis4_d, Converter={StaticResource BooleanToVisibilityConverter}}">Cis4</TextBlock>
+            </Button>
+            <Button x:Name="Button_D4_d" Grid.Column="12" Grid.Row="4" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="D4">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_D4_d, Converter={StaticResource BooleanToVisibilityConverter}}">D4</TextBlock>
+            </Button>
+            <!--STRUNA a-->
+            <Button x:Name="Button_A2_a" Grid.Column="0" Grid.Row="5" Style="{StaticResource TransparentStyle}" Background="#FF2E2722" Click="MyClickFunction" Tag="A2">
+                <TextBlock Style="{StaticResource sound_texblock_2}" Width="30">A2</TextBlock>
+            </Button>
+            <Button x:Name="Button_B2_a" Grid.Column="1" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="B2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_B2_a, Converter={StaticResource BooleanToVisibilityConverter}}">B2</TextBlock>
+            </Button>
+            <Button x:Name="Button_H2_a" Grid.Column="2" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="H2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_H2_a, Converter={StaticResource BooleanToVisibilityConverter}}">H2</TextBlock>
+            </Button>
+            <Button x:Name="Button_C3_a" Grid.Column="3" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="C3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_C3_a, Converter={StaticResource BooleanToVisibilityConverter}}">C3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Cis3_a" Grid.Column="4" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Cis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Cis3_a, Converter={StaticResource BooleanToVisibilityConverter}}">Cis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_D3_a" Grid.Column="5" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="D3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_D3_a, Converter={StaticResource BooleanToVisibilityConverter}}">D3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Dis3_a" Grid.Column="6" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Dis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Dis3_a, Converter={StaticResource BooleanToVisibilityConverter}}">Dis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_E3_a" Grid.Column="7" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="E3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_E3_a, Converter={StaticResource BooleanToVisibilityConverter}}">E3</TextBlock>
+            </Button>
+            <Button x:Name="Button_F3_a" Grid.Column="8" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="F3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_F3_a, Converter={StaticResource BooleanToVisibilityConverter}}">F3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Fis3_a" Grid.Column="9" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Fis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Fis3_a, Converter={StaticResource BooleanToVisibilityConverter}}">Fis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_G3_a" Grid.Column="10" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="G3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_G3_a, Converter={StaticResource BooleanToVisibilityConverter}}">G3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Gis3_a" Grid.Column="11" Grid.Row="5" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Gis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Gis3_a, Converter={StaticResource BooleanToVisibilityConverter}}">Gis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_A3_a" Grid.Column="12" Grid.Row="5" Style="{StaticResource sound_button3}" Click="MyClickFunction" Tag="A3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_A3_a, Converter={StaticResource BooleanToVisibilityConverter}}">A3</TextBlock>
+            </Button>
+            <!--STRUNA E-->
+            <Button x:Name="Button_E2_E" Grid.Column="0" Grid.Row="6" Style="{StaticResource TransparentStyle}" Background="#FF2E2722" Click="MyClickFunction" Tag="E2">
+                <TextBlock Style="{StaticResource sound_texblock_2}" Width="30" >E2</TextBlock>
+            </Button>
+            <Button x:Name="Button_F2_E" Grid.Column="1" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="F2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_F2_E, Converter={StaticResource BooleanToVisibilityConverter}}">F2</TextBlock>
+            </Button>
+            <Button x:Name="Button_Fis2_E" Grid.Column="2" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Fis2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Fis2_E, Converter={StaticResource BooleanToVisibilityConverter}}">Fis2</TextBlock>
+            </Button>
+            <Button x:Name="Button_G2_E" Grid.Column="3" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="G2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_G2_E, Converter={StaticResource BooleanToVisibilityConverter}}">G2</TextBlock>
+            </Button>
+            <Button x:Name="Button_Gis2_E" Grid.Column="4" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Gis2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Gis2_E, Converter={StaticResource BooleanToVisibilityConverter}}">Gis2</TextBlock>
+            </Button>
+            <Button x:Name="Button_A2_E" Grid.Column="5" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="A2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_A2_E, Converter={StaticResource BooleanToVisibilityConverter}}">A2</TextBlock>
+            </Button>
+            <Button x:Name="Button_B2_E" Grid.Column="6" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="B2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_B2_E, Converter={StaticResource BooleanToVisibilityConverter}}">B2</TextBlock>
+            </Button>
+            <Button x:Name="Button_H2_E" Grid.Column="7" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="H2">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_H2_E, Converter={StaticResource BooleanToVisibilityConverter}}">H2</TextBlock>
+            </Button>
+            <Button x:Name="Button_C3_E" Grid.Column="8" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="C3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_C3_E, Converter={StaticResource BooleanToVisibilityConverter}}">C3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Cis3_E" Grid.Column="9" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Cis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Cis3_E, Converter={StaticResource BooleanToVisibilityConverter}}">Cis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_D3_E" Grid.Column="10" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="D3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_D3_E, Converter={StaticResource BooleanToVisibilityConverter}}">D3</TextBlock>
+            </Button>
+            <Button x:Name="Button_Dis3_E" Grid.Column="11" Grid.Row="6" Style="{StaticResource sound_button}" Click="MyClickFunction" Tag="Dis3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_Dis3_E, Converter={StaticResource BooleanToVisibilityConverter}}">Dis3</TextBlock>
+            </Button>
+            <Button x:Name="Button_E3_E" Grid.Column="12" Grid.Row="6" Style="{StaticResource sound_button2}" Click="MyClickFunction" Tag="E3">
+                <TextBlock Style="{StaticResource sound_texblock}" Visibility="{Binding IsMouseOver, ElementName=Button_E3_E, Converter={StaticResource BooleanToVisibilityConverter}}">E3</TextBlock>
+            </Button>
+        </Grid>
+
+        <Grid Margin="10,591,10,10">
+            <Button HorizontalAlignment="Left" Height="102" Margin="398,26,0,0" VerticalAlignment="Top" Width="469" Click="Back_to_Game_Click" Style="{StaticResource TransparentStyle}">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/back_to_menu.png"/>
+                </Button.Background>
+                <TextBlock FontWeight="ExtraBold" FontSize="45" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="POWRÓT DO GRY"/></TextBlock>
+            </Button>
+
+        </Grid>
+
+
+    </Grid>
+</Window>

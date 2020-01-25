@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Game</name>
+    </assembly>
+    <members>
+        <member name="T:Game.Game_Info">
+            <summary>
+            Klasa Game_Info to klasa odpowiedzialna za wyświetlane informacje w grze. Obiekt tej klasy jest potrzebny do bindingu z textbockem wyświetlającym 
+            czy dany ruch w grze był prawidłowy czy błędny. Klasa ta dziedziczy z interfejsu INotifyPropertyChanged oraz korzysta z PropertyChangedEventHandler, co umożliwia nam automatyczną zmianę wyświetlanej wartości.
+            </summary>
+        </member>
+        <member name="E:Game.Game_Info.PropertyChanged">
+            <summary> 
+            publiczny Event PropertyChangedEventHandler, wymagany przez interfejs INotifyPropertyChanged
+            </summary> 
+        </member>
+        <member name="P:Game.Game_Info.Text_to_display">
+            <summary> 
+            Dostęp do prywatnego pola _Text_to_display
+            </summary> 
+        </member>
+        <member name="M:Game.Game_Info.RaisePropertyChanged(System.String)">
+            <summary> 
+            Metoda odpowiedzialna za automatyczną zmianę wartości
+            </summary> 
+            <param name="text">wartość(tekst), która się zmienia</param> 
+        </member>
+        <member name="M:Game.Game_Info.#ctor(System.String)">
+            <summary> 
+            Konstruktor klasy Game_Info
+            </summary> 
+        </member>
+        <member name="M:Game.Game_Info.Override_String(System.String)">
+            <summary> 
+            Metoda przekazująca ciąg znaków z klas gry do klasy Game_Info
+            </summary> 
+            <param name="text_to_override">wartość(tekst), którą przekazujemy</param>  
+        </member>
+        <member name="T:Game.HelpInfo">
+            <summary>
+            Klasa ta jest pomocniczym oknem, który można włączyć podczas gry, jeśli okaże się, że dany poziom jest za trudny dla użytkownika
+            </summary>
+            <summary>
+            HelpInfo
+            </summary>
+        </member>
+        <member name="M:Game.HelpInfo.#ctor">
+            <summary>
+            Konstruktor klasy HelpInfo
+            </summary>
+        </member>
+        <member name="M:Game.HelpInfo.Back_to_Game_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za cofnięcie użytkownika z powrotem do gry, zamyka to okno
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.HelpInfo.Window_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Metoda umożliwia zmianę położenia okna gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.HelpInfo.MyClickFunction(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedialna za odtworzenie dźwięku po kliknięciu danego przycisku na gryfie. Wykorzystuje 
+            obiekt klasy SoundPlayer oraz używane w kodzie XAML Tagi, które informują, jaki przycisk został kliknięty.
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.HelpInfo.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.Level_Two">
+            <summary>
+             Klasa ta jest odpowiedzialna za drugi poziom gry
+            </summary>
+            <summary>
+            Level_Two
+            </summary>
+        </member>
+        <member name="M:Game.Level_Two.#ctor">
+            <summary>
+            Konstruktor klasy Level_One, wywoływana jest w nim funkcja InitSounds()
+            </summary>
+        </member>
+        <member name="M:Game.Level_Two.InitSounds">
+            <summary>
+            Metoda ta jest odpowiedzialna za zainicjowanie i wylosowanie nuty, tworzy obiekty typu Sound, P_counter oraz ustawia konteksty do zbindowania ich. 
+            Odtwarza także pierwszy wylosowany dźwięk.
+            </summary>
+        </member>
+        <member name="M:Game.Level_Two.Exit_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za zamknięcie gry, wykorzystuje obiekt klasy MyMessageBox1
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.Minimize_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za minimalizowanie gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.Return_button_CLick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za powrót do Menu głównego
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.Button_Play_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za ponowne odtworzenie aktualnie wylosowanego dźwięku
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.Help_Button_CLick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za otwarcie okna z pomocą do gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.Window_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Metoda umożliwia zmianę położenia okna gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.MyClickFunction(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedialna za odtworzenie dźwięku po kliknięciu danego przycisku na gryfie. Wykorzystuje 
+            obiekt klasy SoundPlayer oraz używane w kodzie XAML Tagi, które informują, jaki przycisk został kliknięty.
+            Sprawdza także, czy kliknięty przycisk jest poprawny, czy błędny, powodując odpowiednie wyświetlenie komunikatu.
+            Następnie losuje kolejny dźwięk. Sprawdza także czy mamy już wystarczającą liczbę punktów, aby wygrać grę
+            lub też, jeśli jest za mała - przegrać grę.
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_Two.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.MyMessageBox1">
+            <summary>
+            Klasa ta używania jest do upewnienia się, czy użytkownik na pewno chce zamknąć grę.
+            </summary>
+            <summary>
+            MyMessageBox1
+            </summary>
+        </member>
+        <member name="M:Game.MyMessageBox1.#ctor">
+            <summary> 
+            Konstruktor klasy MyMessageBox1Sound
+            </summary> 
+        </member>
+        <member name="M:Game.MyMessageBox1.Button_Click_OK(System.Object,System.Windows.RoutedEventArgs)">
+            <summary> 
+            Metoda wywoływana po naciśnięciu przycisku OK, zamyka program
+            </summary> 
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.MyMessageBox1.Button_Click_Anuluj(System.Object,System.Windows.RoutedEventArgs)">
+            <summary> 
+            Metoda wywoływana po naciśnięciu przycisku Anuluj, anuluje zamykanie programu(wyłącza okienko z zapytaniem)
+            </summary> 
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.MyMessageBox1.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.MyMessageBox2">
+            <summary>
+            Klasa ta używana jest do wyświetlania różnych komunikatów z gry.
+            </summary>
+            <summary>
+            MyMessageBox2
+            </summary>
+        </member>
+        <member name="M:Game.MyMessageBox2.#ctor(System.String)">
+            <summary>
+            Konstruktor klasy MyMessageBox2, tworzy on nowy obiekt klasy Game_Info, aby wyświetlany tekst był zmieniany automatycznie
+            </summary>
+            <param name="Text_from_game">przesłany tekst, który ma zostać wyświetlony w okienku</param> 
+        </member>
+        <member name="M:Game.MyMessageBox2.Button_Click_OK(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda wywoływana po naciśnięciu przycisku OK, zamyka okienko informacyjne
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.MyMessageBox2.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.P_counter">
+            <summary>
+            Klasa P_counter to klasa tworząca licznik w grze. Obiekt tej klasy jest potrzebny do bindingu z textbockem wyświetlającym 
+            akutalną punktację w grze. Klasa ta dziedziczy z interfejsu INotifyPropertyChanged oraz korzysta z PropertyChangedEventHandler, co umożliwia nam automatyczną zmianę wyświetlanej wartości.
+            </summary>
+        </member>
+        <member name="E:Game.P_counter.PropertyChanged">
+            <summary> 
+            publiczny Event PropertyChangedEventHandler, wymagany przez interfejs INotifyPropertyChanged
+            </summary> 
+        </member>
+        <member name="P:Game.P_counter.Points_counter">
+            <summary> 
+            Dostęp do prywatnego pola _Points_counter
+            </summary> 
+        </member>
+        <member name="M:Game.P_counter.RaisePropertyChanged(System.String)">
+            <summary> 
+            Metoda odpowiedzialna za automatyczną zmianę wartości
+            </summary> 
+            <param name="propertion_name">wartość(licznik), która się zmienia</param> 
+        </member>
+        <member name="M:Game.P_counter.#ctor(System.Int32)">
+            <summary> 
+            Konstruktor klasy P_Counter
+            </summary> 
+        </member>
+        <member name="M:Game.P_counter.Increase_counter">
+            <summary> 
+            Metoda zwiększająca nasz licznik punktów. 
+            </summary> 
+        </member>
+        <member name="M:Game.P_counter.Decrease_counter">
+            <summary> 
+            Metoda zmniejszająca nasz licznik punktów. 
+            </summary> 
+        </member>
+        <member name="M:Game.P_counter.ToInt">
+            <summary> 
+            Metoda zwracająca licznik jako ciąg znaków.
+            </summary> 
+        </member>
+        <member name="T:Game.Sound">
+            <summary>
+            Klasa Sound to klasa odpowiedzialna za wyświetlane informacje w grze. Obiekt tej klasy jest potrzebny do bindingu z textbockem wyświetlającym 
+            wylosowaną nutę, dźwięk, któy mamy wskazać. Klasa ta dziedziczy z interfejsu INotifyPropertyChanged oraz korzysta z PropertyChangedEventHandler, co umożliwia nam automatyczną zmianę wyświetlanej wartości.
+            </summary>
+        </member>
+        <member name="E:Game.Sound.PropertyChanged">
+            <summary> 
+            publiczny Event PropertyChangedEventHandler, wymagany przez interfejs INotifyPropertyChanged
+            </summary> 
+        </member>
+        <member name="P:Game.Sound.Name_of_sound">
+            <summary> 
+            Dostęp do prywatnego pola _Name_of_sound
+            </summary> 
+        </member>
+        <member name="M:Game.Sound.RaisePropertyChanged(System.String)">
+            <summary> 
+            Metoda odpowiedzialna za automatyczną zmianę wartości
+            </summary> 
+            <param name="propertion_name">wartość(nuta), która się zmienia</param> 
+        </member>
+        <member name="M:Game.Sound.#ctor(System.String)">
+            <summary> 
+            Konstruktor klasy Sound
+            </summary> 
+        </member>
+        <member name="T:Game.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Game.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Game.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Game.Info">
+            <summary>
+            Interaction logic for Info.xaml
+            </summary>
+            <summary>
+            Info
+            </summary>
+        </member>
+        <member name="M:Game.Info.#ctor">
+            <summary>
+            Konstruktor klasy Info
+            </summary>
+        </member>
+        <member name="M:Game.Info.Exit_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za zamknięcie gry, wykorzystuje obiekt klasy MyMessageBox1
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Info.Minimize_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za minimalizowanie gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Info.Return_button_CLick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za powrót do Menu głównego
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Info.Window_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Metoda umożliwia zmianę położenia okna gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Info.MyClickFunction(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedialna za odtworzenie dźwięku po kliknięciu danego przycisku na gryfie. Wykorzystuje 
+            obiekt klasy SoundPlayer oraz używane w kodzie XAML Tagi, które informują, jaki przycisk został kliknięty.
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Info.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.Level_One">
+            <summary>
+            Klasa ta jest odpowiedzialna za pierwszy poziom gry
+            </summary>
+            <summary>
+            Level_One
+            </summary>
+        </member>
+        <member name="M:Game.Level_One.#ctor">
+            <summary>
+            Konstruktor klasy Level_One, wywoływana jest w nim funkcja InitSounds()
+            </summary>
+        </member>
+        <member name="M:Game.Level_One.InitSounds">
+            <summary>
+            Metoda ta jest odpowiedzialna za zainicjowanie i wylosowanie nuty, tworzy obiekty typu Sound, P_counter oraz ustawia konteksty do zbindowania ich.
+            </summary>
+        </member>
+        <member name="M:Game.Level_One.Exit_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za zamknięcie gry, wykorzystuje obiekt klasy MyMessageBox1
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_One.Minimize_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za minimalizowanie gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_One.Return_button_CLick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za powrót do Menu głównego
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_One.Help_Button_CLick(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za otwarcie okna z pomocą do gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_One.Window_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Metoda umożliwia zmianę położenia okna gry
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_One.MyClickFunction(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedialna za odtworzenie dźwięku po kliknięciu danego przycisku na gryfie. Wykorzystuje 
+            obiekt klasy SoundPlayer oraz używane w kodzie XAML Tagi, które informują, jaki przycisk został kliknięty.
+            Sprawdza także, czy kliknięty przycisk jest poprawny, czy błędny, powodując odpowiednie wyświetlenie komunikatu.
+            Następnie losuje kolejny dźwięk. Sprawdza także czy mamy już wystarczającą liczbę punktów, aby przejść do poziomu 
+            drugiego, lub też, jeśli jest za mała - kończy grę.
+            </summary>
+            <param name="e">RoutedEventArgs</param> 
+            <param name="sender">sender</param> 
+        </member>
+        <member name="M:Game.Level_One.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.MainWindow">
+            <summary>
+            Klasa ta to  główna klasa gry, uruchamiana po starcie programu.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.#ctor">
+            <summary>
+            Konstruktor klasy MainWindow
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.Button_New_Game_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za rozpoczęcie nowej gry, otwiera okno pierwszego poziomu
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.Button_Info_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna otwarcie okna Info, służącego do nauki
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.Exit_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za zamknięcie gry, wykorzystuje obiekt klasy MyMessageBox1
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.Minimize_button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Metoda odpowiedzialna za minimalizowanie gry
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.Window_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Metoda umożliwia zmianę położenia okna gry
+            </summary>
+        </member>
+        <member name="M:Game.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Game.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Game.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Game.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

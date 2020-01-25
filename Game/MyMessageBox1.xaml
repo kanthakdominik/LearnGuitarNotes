@@ -1,0 +1,21 @@
+﻿<Window x:Class="Game.MyMessageBox1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Game"
+        mc:Ignorable="d"
+        Title="Close" Height="200" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False"  WindowStyle="None" Topmost="True" >
+    <Window.Background>
+        <ImageBrush ImageSource="Images\MyMessageBox.jpg"/>
+    </Window.Background>
+    <Grid>
+        <TextBlock Margin="0,32,0,102" Text="Czy chcesz zamknąć aplikację?" TextAlignment="Center" FontSize="25" FontWeight="Bold"/>
+        <Button Margin="60,122,220,38" Height="40" Width="120" Background="#FFB69711" Click="Button_Click_Anuluj">
+            <TextBlock Text="Anuluj" FontSize="15" FontWeight="Bold"/>
+        </Button>
+        <Button Margin="220,122,60,38" Height="40" Width="120" Background="#FFB69711" Click="Button_Click_OK">
+            <TextBlock Text="Ok" FontSize="15" FontWeight="Bold"/>
+        </Button>
+    </Grid>
+</Window>
